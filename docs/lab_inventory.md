@@ -26,3 +26,15 @@ Operating System: To Be Installed
 
 Purpose:
 Centralized log collection, detection engineering, and investigation platform.
+
+WS-01
+IP: 192.168.44.155
+Role: Victim Workstation
+
+KALI-ATTACKER
+IP: 192.168.44.131
+Role: Attacker Machine
+
+SPLUNK
+IP: 192.168.44.157
+Role: SIEM Server
