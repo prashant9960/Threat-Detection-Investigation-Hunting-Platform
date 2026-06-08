@@ -1,0 +1,73 @@
+# SIEM Architecture
+
+## Overview
+
+The Security Information and Event Management (SIEM) infrastructure is designed to collect, process, analyze, and investigate security events generated within the SOC lab environment.
+
+## Infrastructure
+
+### KALI-ATTACKER
+
+Role: Adversary Machine
+
+IP Address: 192.168.44.131
+
+Purpose:
+Simulates attacker activity and generates security events.
+
+### WS-01
+
+Role: Victim Workstation
+
+IP Address: 192.168.44.155
+
+Purpose:
+Generates endpoint telemetry and security logs.
+
+### SPLUNK
+
+Role: SIEM Server
+
+Hostname: splunk
+
+IP Address: 192.168.44.157
+
+Operating System: Ubuntu 26.04 LTS
+
+CPU: 2 Cores
+
+Memory: 3.3 GB
+
+Purpose:
+Centralized log collection, detection engineering, incident investigation, and threat hunting.
+
+## Data Flow
+
+KALI-ATTACKER
+↓
+WS-01
+↓
+Sysmon
+↓
+Splunk Universal Forwarder
+↓
+Splunk Enterprise
+↓
+Detection Engineering
+↓
+Incident Investigation
+↓
+Threat Hunting
+
+## Planned Log Sources
+
+* Sysmon
+* Windows Security Logs
+* Windows System Logs
+* Windows Application Logs
+
+## Status
+
+* Network Validation Completed
+* Splunk Server Deployed
+* Ready for Splunk Enterprise Installation
